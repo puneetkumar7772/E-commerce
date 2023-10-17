@@ -19,6 +19,11 @@ import { WomenfootwearComponent } from './pages/womenfootwear/womenfootwear.comp
 import { WomenclothesComponent } from './pages/womenclothes/womenclothes.component';
 import { KitchenstoreComponent } from './pages/kitchenstore/kitchenstore.component';
 import { LedComponent } from './pages/led/led.component';
+import { RoomfurnitureComponent } from './pages/roomfurniture/roomfurniture.component';
+import { BeautyproductComponent } from './pages/beautyproduct/beautyproduct.component';
+import { SportsComponent } from './pages/sports/sports.component';
+import { SportskitComponent } from './pages/sportskit/sportskit.component';
+import { AllbooksComponent } from './pages/allbooks/allbooks.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { LedComponent } from './pages/led/led.component';
     WomenfootwearComponent,
     WomenclothesComponent,
     KitchenstoreComponent,
-    LedComponent
+    LedComponent,
+    RoomfurnitureComponent,
+    BeautyproductComponent,
+    SportsComponent,
+    SportskitComponent,
+    AllbooksComponent
   ],
   imports: [
     BrowserModule,

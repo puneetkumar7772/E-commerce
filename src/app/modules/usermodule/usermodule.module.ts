@@ -14,6 +14,11 @@ import { WomenfootwearComponent } from 'src/app/pages/womenfootwear/womenfootwea
 import { WomenclothesComponent } from 'src/app/pages/womenclothes/womenclothes.component';
 import { KitchenstoreComponent } from 'src/app/pages/kitchenstore/kitchenstore.component';
 import { LedComponent } from 'src/app/pages/led/led.component';
+import { RoomfurnitureComponent } from 'src/app/pages/roomfurniture/roomfurniture.component';
+import { BeautyproductComponent } from 'src/app/pages/beautyproduct/beautyproduct.component';
+import { SportsComponent } from 'src/app/pages/sports/sports.component';
+import { SportskitComponent } from 'src/app/pages/sportskit/sportskit.component';
+import { AllbooksComponent } from 'src/app/pages/allbooks/allbooks.component';
 
 
 
@@ -69,6 +74,26 @@ const routes: Routes = [
   {
     path: 'Led',
     component:LedComponent
+  },
+  {
+    path: 'roomFurniture',
+    component:RoomfurnitureComponent
+  },
+  {
+    path: 'beautyProduct',
+    component:BeautyproductComponent
+  },
+  {
+    path: 'sports&fitness',
+    component:SportsComponent
+  },
+  {
+    path: 'sportsKit',
+    component:SportskitComponent
+  },
+  {
+    path: 'allbooks',
+    component:AllbooksComponent
   }
 ];
 
