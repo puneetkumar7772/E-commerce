@@ -17,3 +17,17 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<div class="row">
+  <div class="card" style="width: 18rem;" *ngFor="let data of allData">
+    <img [src]="data.thumbnail" class="card-img-top" alt="..." class="all_image"><br>
+    <div class="card-body">
+      <h5 class="card-title">{{data.category}}</h5>
+      <span>{{data.title}}</span>
+      <p class="card-text">{{data.brand}}</p>
+      <p style="color: #777;">{{data.price|currency:'INR'}}</p>
+   <div class="cart">
+    <button href="#" class=" btn1">Add to Cart</button>
+   </div>
+</div>
+  </div>
+</div>

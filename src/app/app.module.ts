@@ -24,6 +24,7 @@ import { BeautyproductComponent } from './pages/beautyproduct/beautyproduct.comp
 import { SportsComponent } from './pages/sports/sports.component';
 import { SportskitComponent } from './pages/sportskit/sportskit.component';
 import { AllbooksComponent } from './pages/allbooks/allbooks.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,9 @@ import { AllbooksComponent } from './pages/allbooks/allbooks.component';
     BrowserModule,
     AppRoutingModule,
     UsermoduleModule,
-    SellermoduleModule
+    SellermoduleModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
