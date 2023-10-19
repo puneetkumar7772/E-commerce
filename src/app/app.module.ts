@@ -25,6 +25,8 @@ import { SportsComponent } from './pages/sports/sports.component';
 import { SportskitComponent } from './pages/sportskit/sportskit.component';
 import { AllbooksComponent } from './pages/allbooks/allbooks.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     UsermoduleModule,
     SellermoduleModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule,
 
   ],
   providers: [],

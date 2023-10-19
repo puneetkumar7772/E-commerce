@@ -2,9 +2,23 @@
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../../../assets/images/fitness_5.gif" class="d-block w-100" alt="...">
+      <img src="../../../assets/images/watches.jpg" class="d-block w-100" alt="...">
     </div>
 
   </div>
 
+</div>
+<div class="row">
+  <div class="card2" style="width: 18rem;" *ngFor="let value of allData">
+    <img [src]="value.thumbnail" class="card-img-top" alt="..." class="all_image"><br>
+    <div class="card-body">
+      <h5 class="card-title">{{value.category}}</h5>
+      <span>{{value.title}}</span>
+      <p class="card-text">{{value.brand}}</p>
+      <p style="color: #777;">{{value.price|currency:'INR'}}</p>
+   <div class="cart">
+    <button href="#" class=" btn1">Add to Cart</button>
+   </div>
+</div>
+  </div>
 </div>

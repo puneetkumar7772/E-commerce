@@ -12,7 +12,15 @@ export class AuthserviceService {
   baseurl2="https://dummyjson.com/products/category/"
 
 getAllProducts():Observable<any>{
-return this.http.get(`${this.baseUrl}/products?&limit=20`)
+return this.http.get(`${this.baseUrl}/products?&limit=25`)
+}
+
+getMobiles():Observable<any>{
+  return this.http.get(`${this.baseurl2}smartphones`)
+}
+
+getLaptops():Observable<any>{
+  return this.http.get(`${this.baseurl2}laptops`)
 }
 
 getMenClothes():Observable<any>{
@@ -25,12 +33,22 @@ getMenShoes():Observable<any>{
 }
 getWomenClotes():Observable<any>{
   return this.http.get(`${this.baseurl2}womens-dresses`)
-
 }
+
 getWomenShoes():Observable<any>{
   return this.http.get(`${this.baseurl2}womens-shoes`)
-
 }
-
+getSkincare():Observable<any>{
+  return this.http.get(`${this.baseurl2}skincare`)
+}
+roomFurniture():Observable<any>{
+  return this.http.get(`${this.baseurl2}furniture`)
+}
+womenWatches():Observable<any>{
+  return this.http.get(`${this.baseurl2}womens-watches`)
+}
+menWatches():Observable<any>{
+  return this.http.get(`${this.baseurl2}mens-watches`)
+}
 
 }

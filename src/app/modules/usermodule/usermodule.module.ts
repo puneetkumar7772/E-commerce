@@ -52,7 +52,7 @@ const routes: Routes = [
     component:MensfootwearComponent
   },
   {
-    path: 'kidsClothes',
+    path: 'groceries',
     component:KidsclothesComponent
   },
   {
@@ -84,12 +84,12 @@ const routes: Routes = [
     component:BeautyproductComponent
   },
   {
-    path: 'sports&fitness',
-    component:SportsComponent
+    path: 'womenWatches',
+    component:SportskitComponent
   },
   {
-    path: 'sportsKit',
-    component:SportskitComponent
+    path: 'menWatches',
+    component:SportsComponent
   },
   {
     path: 'allbooks',

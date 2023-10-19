@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import 'ngx-toastr/toastr';
+
 *{
   margin: 0px;
   padding: 0px;
@@ -27,7 +31,7 @@ h1{
 }
 
 .btn1{
-  background-color: rgb(181, 160, 160);
+  background-color:#777;
   width: 224px;
   border-radius: 10px;
   color: #fff;
@@ -35,7 +39,28 @@ h1{
   padding-top: 5px;
   transition: background-color 0.3s;
   font-weight: bold;
+  outline: none;
+  border: none;
 }
 
 .btn1:hover {
-background-color: rgb(243, 243, 159);}
+background-color: rgb(198, 132, 224);
+}
+.card2 {
+  width: 18rem;
+  transition: transform 0.3s, z-index 0.3s;
+}
+
+.card2:hover {
+  transform: scale(1.05); /* Increase the scale factor for a more pronounced effect */
+  z-index: 1;
+}
+
+.card2-img-top {
+  max-width: 100%;
+  height: auto;
+}
+.cart{
+  margin-left: 19px;
+  margin-right: 17px;
+}
