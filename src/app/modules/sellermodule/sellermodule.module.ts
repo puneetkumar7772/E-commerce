@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from 'src/app/pages/home/home.component';
-import { LoginComponent } from 'src/app/pages/login/login.component';
-import { RegisterComponent } from 'src/app/pages/register/register.component';
+import { HomeComponent } from 'src/app/pages/home/home.component'
 import { SellerregisterComponent } from 'src/app/sellerpages/sellerregister/sellerregister.component';
+import { LoginComponent } from 'src/app/sellerpages/login/login.component';
 
 const routes: Routes = [
   {
@@ -12,12 +11,12 @@ const routes: Routes = [
     component:HomeComponent
   },
   {
-    path: 'register',
+    path: 'seller/register',
     component:SellerregisterComponent
   },
   {
-    path: '',
-    component:RegisterComponent
+    path: 'seller/login',
+    component:LoginComponent
   }
 ];
 

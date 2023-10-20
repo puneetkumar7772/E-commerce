@@ -29,7 +29,7 @@
 > -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Lootdeal Hub</a>
+    <a class="navbar-brand" href="#">Quick Shopping</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,6 +38,23 @@
         <input class="form-control me-2 w-500" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
+    </div>
+    <div class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown"> -->
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:#fff;">
+        Are you Seller
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="/seller/register">Seller Register</a></li>
+          <li><a class="dropdown-item" routerLink="/seller/login">Seller Login</a></li>
+
+        </ul>
+      <!-- </li> -->
+    </div>&nbsp;&nbsp;
+    <div>
+      <button class="btn btn-primary" routerLink="/user/register">Register</button>&nbsp;
+      <button class="btn btn-danger" routerLink="/user/login">Login</button>
+
     </div>
   </div>
 </nav>
@@ -115,8 +132,12 @@
             <a class="nav-link active" aria-current="page" routerLink="user/login">Offer Zone</a>
           </li>
       </ul>
+
+
     </div>
+
   </div>
+
 </nav>
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
   <div class="offcanvas-header">
