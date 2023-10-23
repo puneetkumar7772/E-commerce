@@ -1,0 +1,51 @@
+<div class="container">
+  <table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>Product Name</th>
+        <th>category</th>
+        <th>brand</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let value of data">
+      <tr>
+        <td>
+          <div class="d-flex align-items-center">
+            <img
+            [src]="value.thumbnail"
+                alt=""
+                style="width: 45px; height: 45px"
+                class="rounded-circle"
+                />
+            <div class="ms-3">
+              <p class="fw-bold mb-1">{{value.title}}</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <p class="fw-bold mb-1">{{value.category}}</p>
+        </td>
+        <td>
+          <p class="fw-bold mb-1">{{value.brand}}</p>
+        </td>
+        <td>
+          <p class="fw-bold mb-1" style="color: blue;">{{value.price|currency:'INR'}}</p>
+        </td>
+         <td>
+          <p class="fw-bold mb-1">{{value.stock}}</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-link btn-sm btn-rounded fw-bold">
+            Edit
+          </button>
+          <button type="button" class="btn btn-link btn-sm btn-rounded fw-bold">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

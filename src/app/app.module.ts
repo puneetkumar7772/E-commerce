@@ -28,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SellerhomeComponent } from './sellerpages/sellerhome/sellerhome.component';
+import { AddproductComponent } from './sellerpages/addproduct/addproduct.component';
+import { ProductlistComponent } from './sellerpages/productlist/productlist.component';
 
 
 @NgModule({
@@ -51,7 +54,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BeautyproductComponent,
     SportsComponent,
     SportskitComponent,
-    AllbooksComponent
+    AllbooksComponent,
+    SellerhomeComponent,
+    AddproductComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,
