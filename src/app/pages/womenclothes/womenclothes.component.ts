@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthserviceService } from 'src/app/auth/authservice.service';
 
 @Component({
   selector: 'app-womenclothes',
@@ -6,5 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./womenclothes.component.css']
 })
 export class WomenclothesComponent {
+  constructor(private authservice:AuthserviceService){}
 
+  allData: any[] = [];
+
+
+  ngOnInit(){
+    this.getMenShoes()
+  }
+  getMenShoes() {
+    this.authservice.getWomenClotes().subscribe(
+      (res) => {
+        console.log("API response:", res);
+        if (Array.isArray(res.products)) {
+          this.allData = res.products;
+        } else {
+          console.error("Invalid API response format. Expected an array of products.");
+        }
+        console.log("Updated allData:", this.allData);
+      },
+      (error) => {
+        console.error("API request error:", error);
+      }
+    );
+  }
 }

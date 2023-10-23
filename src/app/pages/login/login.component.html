@@ -1,1 +1,78 @@
-<p>login works!</p>
+<!-- <div class="login login-container"> -->
+<div>
+  <div class="login_section container">
+    <div>
+      <!-- <div class="login-image"> -->
+        <img class="login-image" src="../../../assets/images/login.webp" alt="Side Image">
+      <!-- </div> -->
+    </div>
+    <!-- <div> -->
+      <form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+        <h3>User Login</h3>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input class="form-control" type="email" id="email" name="email" placeholder="Email" formControlName="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="form-control" type="password" id="password" name="password" placeholder="Password" formControlName="password" required>
+        </div>
+        <button type="submit">Login</button>
+        <div class="signup-link">
+          <p>Not registered? <a routerLink="/user/register">Register</a></p>
+         </div>
+         <div><a href="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Forgate password</a></div>
+      </form>
+
+    <!-- </div> -->
+  </div>
+</div>
+<!-- </div> -->
+<!-- first  modal Verify Email  -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+      </div>
+      <div class="modal-body">
+       <form action="">
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <button type="submit" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Send Mail</button>
+       </form>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- second modal verify OTP -->
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-group">
+            <input type="text" id="email" name="email" placeholder="OTP" required>
+          </div>
+          <button type="submit" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Verify OTP</button>
+         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="">
+
+
+</div>
