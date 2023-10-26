@@ -19,7 +19,7 @@
           Password is required and must be at least 8 characters
          </div>
         <label for="password">Confirm password:</label>
-        <input class="form-control" type="password" id="password" name="password" placeholder="Enter your confirm password" formControlName="confirmedPassword">
+        <input class="form-control" type="password" id="confirmpassword" name="password" placeholder="Enter your confirm password" formControlName="confirmedPassword">
         <div *ngIf="myForm.get('confirmedPassword').touched && myForm.get('confirmedPassword').invalid" class="error-message">
           Confirm Password is required.
          </div>

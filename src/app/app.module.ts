@@ -31,6 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SellerhomeComponent } from './sellerpages/sellerhome/sellerhome.component';
 import { AddproductComponent } from './sellerpages/addproduct/addproduct.component';
 import { ProductlistComponent } from './sellerpages/productlist/productlist.component';
+import { AddcartComponent } from './pages/addcart/addcart.component';
+import { SellerloginComponent } from './sellerpages/sellerlogin/sellerlogin.component';
 
 
 @NgModule({
@@ -57,7 +59,9 @@ import { ProductlistComponent } from './sellerpages/productlist/productlist.comp
     AllbooksComponent,
     SellerhomeComponent,
     AddproductComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    AddcartComponent,
+    SellerloginComponent
   ],
   imports: [
     BrowserModule,

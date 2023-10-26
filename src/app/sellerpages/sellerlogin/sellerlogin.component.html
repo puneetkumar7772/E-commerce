@@ -1,0 +1,28 @@
+<!-- <div class="login login-container"> -->
+  <div>
+    <div class="login_section container">
+      <div>
+        <!-- <div class="login-image"> -->
+          <img class="login-image" src="../../../assets/images/seller2.png" alt="Side Image">
+        <!-- </div> -->
+      </div>
+      <!-- <div> -->
+        <form class="login-form" [formGroup]="sellerloginForm" (ngSubmit)="sellerLogin()">
+          <h3>Seller Login</h3>
+          <div class="form-group">
+            <!-- <label for="seller">Seller Id</label> -->
+            <input class="form-control" type="text" id="text" name="seller Id" placeholder="Seller Id" formControlName="SellerID" required>
+          </div>
+          <div class="form-group">
+            <!-- <label for="password">Password</label> -->
+            <input class="form-control" type="password" id="password" name="password" placeholder="Password" formControlName="password" required>
+          </div>
+          <button type="submit">Login</button>
+          <div class="signup-link">
+            <p>Not registered? <a routerLink="/seller/register">Register</a></p>
+           </div>
+           <div><a href="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Forgate password</a></div>
+        </form>
+      <!-- </div> -->
+    </div>
+  </div>

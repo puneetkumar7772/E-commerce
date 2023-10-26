@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./addproduct.component.css']
 })
 export class AddproductComponent {
+  constructor(){}
   currentStep = 1;
 
+  ngOnInit() {
+    this.setStepVisibility(this.currentStep, 'block');
+  }
   nextStep(step: number) {
-    if (step === this.currentStep && this.currentStep < 3) {
+    if (step === this.currentStep && this.currentStep < 4) {
       this.setStepVisibility(this.currentStep + 1, 'block');
       this.setStepVisibility(this.currentStep, 'none');
       this.currentStep++;
@@ -31,8 +35,7 @@ export class AddproductComponent {
     }
   }
 
-  ngOnInit() {
-    // Initial step is visible
-    this.setStepVisibility(this.currentStep, 'block');
-  }
+  
+
+
 }

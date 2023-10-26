@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { SellerregisterComponent } from 'src/app/sellerpages/sellerregister/sellerregister.component';
-import { LoginComponent } from 'src/app/sellerpages/login/login.component';
 import { SellerhomeComponent } from 'src/app/sellerpages/sellerhome/sellerhome.component';
 import { AddproductComponent } from 'src/app/sellerpages/addproduct/addproduct.component';
 import { ProductlistComponent } from 'src/app/sellerpages/productlist/productlist.component';
+import { SellerloginComponent } from 'src/app/sellerpages/sellerlogin/sellerlogin.component';
 
 const routes: Routes = [
   {
@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'seller/login',
-    component:LoginComponent
+    component:SellerloginComponent
   },
   {
     path: 'seller/addproduct',

@@ -6,7 +6,7 @@
 .login_section{
   display: grid;
   grid-template-columns: 60% 30%;
-  margin-top:1rem;
+  margin-top: 5rem;
 }
 
 
@@ -98,12 +98,7 @@ a{
   cursor: pointer;
   color:#007bff;
 }
-.error-message{
-  color: red;
-  font-size: 12px;
-  text-align: left;
-  margin-bottom: 9px;
-}
+
 @media screen and (min-width:250px) and (max-width:768px){
 
 .login_section{
