@@ -52,7 +52,7 @@ background-color: rgb(198, 132, 224);
 }
 
 .card2:hover {
-  transform: scale(1.05); /* Increase the scale factor for a more pronounced effect */
+  transform: scale(1.05);
   z-index: 1;
 }
 

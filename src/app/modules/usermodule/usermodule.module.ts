@@ -19,6 +19,7 @@ import { BeautyproductComponent } from 'src/app/pages/beautyproduct/beautyproduc
 import { SportsComponent } from 'src/app/pages/sports/sports.component';
 import { SportskitComponent } from 'src/app/pages/sportskit/sportskit.component';
 import { AllbooksComponent } from 'src/app/pages/allbooks/allbooks.component';
+import { AddcartComponent } from 'src/app/pages/addcart/addcart.component';
 
 
 
@@ -94,6 +95,9 @@ const routes: Routes = [
   {
     path: 'allbooks',
     component:AllbooksComponent
+  }, {
+    path: 'addtocart',
+    component:AddcartComponent
   }
 ];
 

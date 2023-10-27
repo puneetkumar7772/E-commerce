@@ -7,32 +7,49 @@
         <!-- </div> -->
       </div>
       <!-- <div> -->
-        <form class="login-form">
+        <form class="login-form" [formGroup]="sellerForm" (ngSubmit)="sellerRegister()">
           <h3>Seller Register</h3>
-          <div class="form-group">
-            <label for="email">Name</label>
-            <input class="form-control" type="text" id="text" name="Name" placeholder="Full name" required>
+          <div *ngIf="formSubmitted && sellerForm.invalid" class="error-message">
+            Please fill in all the required fields.
           </div>
           <div class="form-group">
-            <label for="email">Seller Id</label>
-            <input class="form-control" type="text" id="text" name="seller Id" placeholder="Seller Id" required>
+            <!-- <label for="name">Name</label> -->
+            <input class="form-control" type="text" id="text" name="Name" placeholder="Full name" formControlName="Name" required>
+          </div>
+          <div *ngIf="sellerForm.get('Name').touched && sellerForm.get('Name').invalid" class="error-message">
+            Name is required.
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input class="form-control" type="email" id="text" name="email" placeholder="email" required>
+            <!-- <label for="text">Seller Id</label> -->
+            <input class="form-control" type="text" id="seller" name="sellerID" placeholder="Seller Id" formControlName="SellerID" required>
+          </div>
+          <div *ngIf="sellerForm.get('SellerID').touched && sellerForm.get('SellerID').invalid" class="error-message">
+            SellerID is required.
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
-            <input class="form-control" type="password" id="password" name="password" placeholder="Password" required>
+            <!-- <label for="email">Email</label> -->
+            <input class="form-control" type="email" id="email" name="email" placeholder="email" formControlName="email" required>
           </div>
+          <div *ngIf="sellerForm.get('email').touched && sellerForm.get('email').invalid" class="error-message">
+            Email is required.
+           </div>
           <div class="form-group">
-            <label for="password">Confirmed Password</label>
-            <input class="form-control" type="password" id="password" name="password" placeholder="Confirmed Password" required>
+            <!-- <label for="password">Password</label> -->
+            <input class="form-control" type="password" id="password" name="password" placeholder="Password" formControlName="password" required>
           </div>
+          <div *ngIf="sellerForm.get('password').touched && sellerForm.get('password').invalid" class="error-message">
+            Password is required and must be at least 8 characters
+           </div>
+          <div class="form-group">
+            <!-- <label for="password">Confirmed Password</label> -->
+            <input class="form-control" type="password" id="confirmpassword" name="password" placeholder="Confirmed Password" formControlName="confirmedPassword" required>
+          </div>
+          <div *ngIf="sellerForm.get('confirmedPassword').touched && sellerForm.get('confirmedPassword').invalid" class="error-message">
+            Confirm Password is required.
+           </div>
           <button type="submit">Register</button>
           <div class="signup-link">
-            <p>If you are alredy registered? <a routerLink="/user/login">Login</a></p>
-
+            <p>If you are alredy registered? <a routerLink="/seller/login">Login</a></p>
            </div>
         </form>
 

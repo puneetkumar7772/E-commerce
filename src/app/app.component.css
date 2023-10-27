@@ -78,3 +78,7 @@ ul li:hover a{
 ul {
   gap: 10px;
 }
+.cart{
+  width: 50px;
+  cursor: pointer;
+}
