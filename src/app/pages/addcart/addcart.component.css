@@ -3,7 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.navbar{
+  height: 55px;
+}
+.navbar-brand{
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.home{
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 20px;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -99,7 +113,7 @@ h4{
 }
 
 .amount{
-  border: 1px solid;
+  border:1px solid;
   border-radius: 15px;
   display: grid;
   grid-template-rows: 5;
