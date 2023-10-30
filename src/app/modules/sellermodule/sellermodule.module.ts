@@ -6,6 +6,7 @@ import { SellerhomeComponent } from 'src/app/sellerpages/sellerhome/sellerhome.c
 import { AddproductComponent } from 'src/app/sellerpages/addproduct/addproduct.component';
 import { ProductlistComponent } from 'src/app/sellerpages/productlist/productlist.component';
 import { SellerloginComponent } from 'src/app/sellerpages/sellerlogin/sellerlogin.component';
+import { AdminhomeComponent } from 'src/app/admin/adminhome/adminhome.component';
 
 const routes: Routes = [
   {
@@ -21,12 +22,16 @@ const routes: Routes = [
     component:SellerloginComponent
   },
   {
-    path: 'seller/addproduct',
+    path: 'sellerhome/addproduct',
     component:AddproductComponent
   },
   {
-    path: 'seller/sellerproduct',
+    path: 'sellerhome/sellerproduct',
     component:ProductlistComponent
+  },
+  {
+    path: 'sellerhome/adminhome',
+    component:AdminhomeComponent
   },
 ];
 

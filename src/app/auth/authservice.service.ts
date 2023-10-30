@@ -10,6 +10,7 @@ export class AuthserviceService {
   constructor(private http: HttpClient) { }
   baseUrl="https://dummyjson.com"
   baseurl2="https://dummyjson.com/products/category/"
+  baseUrl3 = 'http://localhost:3000/ecommerce/';
 
 getAllProducts():Observable<any>{
 return this.http.get(`${this.baseUrl}/products?&limit=25`)
@@ -49,6 +50,9 @@ womenWatches():Observable<any>{
 }
 menWatches():Observable<any>{
   return this.http.get(`${this.baseurl2}mens-watches`)
-}
 
+}
+addNewProduct(body:any):Observable<any>{
+  return this.http.post(`${this.baseUrl3}products`,body)
+}
 }

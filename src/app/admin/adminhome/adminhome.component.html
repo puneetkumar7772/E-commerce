@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark  fixed-top" style="background-color: #c44fdb;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-size: 22px; font-weight:bold;">Admin Dashboard</a>
+
+    <button  class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Admin Dashboard</h5>
+        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <img src="../../../assets/images/profile2.png" alt="" width="50px" >
+        <br><br>
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/sellerhome/adminhome">All users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/sellerhome/addproduct">All Sellers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">All Reviews</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="/sellerhome/sellerproduct"></a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" style="color: red;" aria-current="page" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

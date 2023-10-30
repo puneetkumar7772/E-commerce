@@ -11,6 +11,7 @@ import { UserService } from 'src/app/auth/user.service';
 })
 export class RegisterComponent {
   myForm:any=FormGroup;
+  formSubmitted = false;
 
   constructor(private fb:FormBuilder,private userservice:UserService ,private router:Router,private toastr: ToastrService){
     this.myForm = this.fb.group({
@@ -22,6 +23,7 @@ export class RegisterComponent {
 }
 
 submitForm(){
+  this.formSubmitted = true;
   let body=this.myForm.value
   console.log("**************",body)
 
