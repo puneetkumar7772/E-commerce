@@ -33,6 +33,9 @@ import { AddproductComponent } from './sellerpages/addproduct/addproduct.compone
 import { ProductlistComponent } from './sellerpages/productlist/productlist.component';
 import { AddcartComponent } from './pages/addcart/addcart.component';
 import { SellerloginComponent } from './sellerpages/sellerlogin/sellerlogin.component';
+import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { UsernavbarComponent } from './pages/usernavbar/usernavbar.component';
 
 
 @NgModule({
@@ -61,7 +64,10 @@ import { SellerloginComponent } from './sellerpages/sellerlogin/sellerlogin.comp
     AddproductComponent,
     ProductlistComponent,
     AddcartComponent,
-    SellerloginComponent
+    SellerloginComponent,
+    AdminhomeComponent,
+    FooterComponent,
+    UsernavbarComponent
   ],
   imports: [
     BrowserModule,

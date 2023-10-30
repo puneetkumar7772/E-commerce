@@ -55,29 +55,7 @@ a{
 ul li:hover a{
   color: #fff;
 } */
-#navbarSupportedContent {
-  padding-left: 21%;
-}
-.form-control {
-  width: 28vw;
-}
-.navbar {
-  background-color: rgb(198, 132, 224);
-}
-.navbar-brand {
-  color: #fff;
-  font-weight: bolder;
-  font-size: 28px;
-  margin-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-.navigation {
-  padding-left: 0%;
-}
-ul {
-  gap: 10px;
-}
+
 .cart{
   width: 50px;
   cursor: pointer;

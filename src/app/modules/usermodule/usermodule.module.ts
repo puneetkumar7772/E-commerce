@@ -21,8 +21,6 @@ import { SportskitComponent } from 'src/app/pages/sportskit/sportskit.component'
 import { AllbooksComponent } from 'src/app/pages/allbooks/allbooks.component';
 import { AddcartComponent } from 'src/app/pages/addcart/addcart.component';
 
-
-
 const routes: Routes = [
   {
     path: '',
@@ -100,7 +98,6 @@ const routes: Routes = [
     component:AddcartComponent
   }
 ];
-
 
 @NgModule({
   declarations: [],
