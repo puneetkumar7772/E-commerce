@@ -8,6 +8,7 @@ import { ProductlistComponent } from 'src/app/sellerpages/productlist/productlis
 import { SellerloginComponent } from 'src/app/sellerpages/sellerlogin/sellerlogin.component';
 import { AdminhomeComponent } from 'src/app/admin/adminhome/adminhome.component';
 import { AlluserslistComponent } from 'src/app/admin/alluserslist/alluserslist.component';
+import { AllsellerlistComponent } from 'src/app/admin/allsellerlist/allsellerlist.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'admin/userlist',
     component:AlluserslistComponent
+  },
+  {
+    path: 'admin/sellerlist',
+    component:AllsellerlistComponent
   },
 ];
 

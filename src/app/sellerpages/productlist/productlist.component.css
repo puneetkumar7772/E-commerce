@@ -11,3 +11,10 @@ a{
 .btn1{
   color: red;
 }
+h1{
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: blue;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+

@@ -1,0 +1,7 @@
+.navbar{
+  position: fixed;
+  top: 0px;
+}
+.navbar-brand{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}

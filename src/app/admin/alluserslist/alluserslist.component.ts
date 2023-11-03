@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/auth/user.service';
 
 @Component({
@@ -8,9 +9,9 @@ import { UserService } from 'src/app/auth/user.service';
 })
 export class AlluserslistComponent {
 
-  constructor(private userservice:UserService){}
+  constructor(private userservice:UserService,private toastr:ToastrService,private cdr:ChangeDetectorRef){}
 
-  data:any[]=[]
+data:any[]=[]
 ngOnInit(){
 this.listOfAllUser()
 }
@@ -30,6 +31,22 @@ listOfAllUser(){
       console.error("API request error:", error);
     }
   );
+}
+
+deleteUsers(id:any){
+  this.userservice.deleteUSer(id).subscribe((res)=>{
+    console.log(res)
+    if(res){
+      console.log("USer deleted successfully")
+      this.toastr.success("USer deleted successfully")
+      this.cdr.detectChanges();
+      this.listOfAllUser()
+
+    }else{
+      console.log("USer is not deleted")
+    }
+  })
+
 }
 
 }

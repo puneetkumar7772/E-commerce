@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { AuthserviceService } from 'src/app/auth/authservice.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { AuthserviceService } from 'src/app/auth/authservice.service';
   styleUrls: ['./productlist.component.css']
 })
 export class ProductlistComponent {
-constructor(private authservice:AuthserviceService ){}
+constructor(private authservice:AuthserviceService,private toastr:ToastrService ){}
 data:any[]=[]
 ngOnInit(){
 this.listOfProduct()
@@ -30,5 +31,18 @@ listOfProduct(){
   );
 }
 
+deleteProducts(_id:any){
+  this.authservice.deleteProduct(_id).subscribe((res)=>{
+    console.log(res)
+    if(res){
+      console.log("product deleted successfully ")
+      this.toastr.success("Product deleted successfully")
+      this.listOfProduct()
+    }else{
+      console.log("product not matched")
+    }
+  })
+
+}
 
 }

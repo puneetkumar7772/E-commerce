@@ -1,13 +1,15 @@
 <app-adminhome></app-adminhome>
+
 <div class="container">
   <h1>
-    All Users list
+    All Sellers list
   </h1>
   <table class="table align-middle mb-0 bg-white">
     <thead class="bg-light">
       <tr>
         <th>Name</th>
         <th>Email</th>
+        <th>SellerID</th>
         <th>Action</th>
 
       </tr>
@@ -31,7 +33,10 @@
           <p class="fw-bold mb-1">{{value.email}}</p>
         </td>
         <td>
-          <button type="button" class="btn  btn-link btn-sm btn-rounded fw-bold" style="color: red;text-decoration: none;" (click)="deleteUsers(value._id)">
+          <p class="fw-bold mb-1">{{value.SellerID}}</p>
+        </td>
+        <td>
+          <button type="button" class="btn  btn-link btn-sm btn-rounded fw-bold" style="color: red;text-decoration: none;" (click)="deleteSeller(value._id)">
             Delete
           </button>
         </td>
