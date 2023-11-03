@@ -17,6 +17,10 @@ export class UserService {
     return this.http.post(`${this.baseUrl}login`, body);
   }
 
+  getAllUSers(): Observable<any> {
+    return this.http.get(`${this.baseUrl}allUSer`,);
+  }
+
   sellerRegister(body: any): Observable<any> {
     return this.http.post(`${this.baseUrl}sellerRegister`, body);
   }

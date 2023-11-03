@@ -7,6 +7,7 @@ import { AddproductComponent } from 'src/app/sellerpages/addproduct/addproduct.c
 import { ProductlistComponent } from 'src/app/sellerpages/productlist/productlist.component';
 import { SellerloginComponent } from 'src/app/sellerpages/sellerlogin/sellerlogin.component';
 import { AdminhomeComponent } from 'src/app/admin/adminhome/adminhome.component';
+import { AlluserslistComponent } from 'src/app/admin/alluserslist/alluserslist.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'sellerhome/adminhome',
     component:AdminhomeComponent
+  },
+  {
+    path: 'admin/userlist',
+    component:AlluserslistComponent
   },
 ];
 
