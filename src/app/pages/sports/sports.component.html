@@ -4,10 +4,9 @@
     <div class="carousel-item active">
       <img src="../../../assets/images/watches.jpg" class="d-block w-100" alt="...">
     </div>
-
   </div>
-
 </div>
+<div class="loader" *ngIf="isLoading"></div>
 <div class="row">
   <div class="card2" style="width: 18rem;" *ngFor="let value of allData">
     <img [src]="value.thumbnail" class="card-img-top" alt="..." class="all_image"><br>
@@ -22,3 +21,4 @@
 </div>
   </div>
 </div>
+<app-footer></app-footer>

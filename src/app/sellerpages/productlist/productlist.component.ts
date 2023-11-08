@@ -10,6 +10,7 @@ import { AuthserviceService } from 'src/app/auth/authservice.service';
 export class ProductlistComponent {
 constructor(private authservice:AuthserviceService,private toastr:ToastrService ){}
 data:any[]=[]
+isLoading: boolean = true;
 ngOnInit(){
 this.listOfProduct()
 }
@@ -20,6 +21,7 @@ listOfProduct(){
       console.log("Response:", res);
       if (Array.isArray(res.products)) {
         this.data = res.products;
+        this.isLoading = false;
       } else {
         console.error("Invalid API response format. Expected an array of products.");
       }
@@ -27,6 +29,7 @@ listOfProduct(){
     },
     (error) => {
       console.error("API request error:", error);
+      this.isLoading = false;
     }
   );
 }

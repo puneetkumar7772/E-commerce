@@ -9,6 +9,7 @@ import { AuthserviceService } from 'src/app/auth/authservice.service';
 export class RoomfurnitureComponent {
   constructor(private authservice:AuthserviceService) { }
   allData: any[] = [];
+  isLoading: boolean = true;
 
 
 ngOnInit(){
@@ -20,6 +21,7 @@ getProducts() {
       console.log("API response:", res);
       if (Array.isArray(res.products)) {
         this.allData = res.products;
+        this.isLoading = false;
       } else {
         console.error("Invalid API response format. Expected an array of products.");
       }
@@ -27,6 +29,7 @@ getProducts() {
     },
     (error) => {
       console.error("API request error:", error);
+      this.isLoading = false;
     }
   );
 }

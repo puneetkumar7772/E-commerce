@@ -17,6 +17,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<div class="loader" *ngIf="isLoading"></div>
 <div class="row">
   <div class="card2" style="width: 18rem;" *ngFor="let data of allData">
     <img [src]="data.thumbnail" class="card-img-top" alt="..." class="all_image"><br>
@@ -31,3 +32,4 @@
 </div>
   </div>
 </div>
+<app-footer></app-footer>

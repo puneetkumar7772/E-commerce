@@ -59,4 +59,9 @@ addNewProduct(body:any):Observable<any>{
 deleteProduct(id:any):Observable<any>{
   return this.http.delete(`${this.baseUrl}/products/${id}`)
 }
+getSingleProduct(id:any):Observable<any>{
+  return this.http.get(`${this.baseUrl}/products/${id}`)
+}
+
+
 }

@@ -11,9 +11,9 @@
         <th>Email</th>
         <th>SellerID</th>
         <th>Action</th>
-
       </tr>
     </thead>
+    <div class="loader" *ngIf="isLoading"></div>
     <tbody *ngFor="let value of data">
       <tr>
         <td>

@@ -7,9 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
   constructor(private http: HttpClient) {}
-  baseUrl = 'http://192.168.29.222:3000/ecommerce/';
+  baseUrl = 'https://e-commerce-backend-hblz.onrender.com/ecommerce/'
+  baseurl2='http://localhost:3000/ecommerce'
 
-  userRegister(body: any): Observable<any> {
+  userRegister(body: any): Observable <any> {
     return this.http.post(`${this.baseUrl}register`, body);
   }
 
@@ -33,9 +34,13 @@ export class UserService {
     return this.http.post(`${this.baseUrl}sellerlogin`, body);
   }
 
+  adminLogin(body: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/admin/login`, body);
+  }
   getAllSelers(): Observable<any> {
     return this.http.get(`${this.baseUrl}allSeller`,);
   }
+
   deleteSeller(id:any): Observable<any> {
     return this.http.delete(`${this.baseUrl}deleteSeller/${id}`,);
   }

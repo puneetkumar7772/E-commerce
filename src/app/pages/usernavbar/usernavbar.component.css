@@ -16,6 +16,10 @@
   margin-right: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.navbar-brand:hover{
+  color: black;
 }
 .navigation {
   padding-left: 0%;
