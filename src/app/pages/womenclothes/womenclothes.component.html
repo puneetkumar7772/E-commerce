@@ -19,17 +19,18 @@
 </div>
 <div class="loader" *ngIf="isLoading"></div>
 <div class="row">
-  <div class="card2" style="width: 18rem;" *ngFor="let data of allData">
+  <div class="card2" style="width: 18rem; cursor: pointer;" *ngFor="let data of allData" routerLink="/sellerhome/singleproduct"(click)      ="details(data.id)"
+   data-toggle="tooltip" data-placement="top" title="Click for Product Detail">
     <img [src]="data.thumbnail" class="card-img-top" alt="..." class="all_image"><br>
     <div class="card-body">
       <h5 class="card-title">{{data.category}}</h5>
       <span>{{data.title}}</span>
       <p class="card-text">{{data.brand}}</p>
       <p style="color: #777;">{{data.price|currency:'INR'}}</p>
-   <div class="cart">
-    <button href="#" class=" btn1">Add to Cart</button>
-   </div>
-</div>
+     <div class="cart">
+      <button href="#" class=" btn1">Add to Cart</button>
+     </div>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>

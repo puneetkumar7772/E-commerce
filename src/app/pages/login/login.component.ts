@@ -12,6 +12,7 @@ import { UserService } from 'src/app/auth/user.service';
 export class LoginComponent {
 
   loginForm:any=FormGroup;
+  formSubmitted = false;
 
   constructor(private fb:FormBuilder,private userservice:UserService,private toastr:ToastrService,private router:Router){
     this.loginForm = this.fb.group({
@@ -22,6 +23,7 @@ export class LoginComponent {
 
 
   loginUser(){
+    this.formSubmitted = true;
     let value=this.loginForm.value
     console.log("first",value)
     this.userservice.userLogin(value).subscribe((res)=>{

@@ -1,21 +1,85 @@
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../../assets/images/kids4.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/kids_2.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/images/kids_3.png" class="d-block w-100" alt="...">
-    </div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+       Payment
+    </a>
+    <a class="home" routerLink="/">Home</a>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+</nav>
+<div class="stepper">
+  <div class="step" style="display: block;" *ngIf="currentStep === 1">
+    <h2>Step 1:- User Information</h2>
+    <form id="step-1">
+      <div class="form-group">
+        <label for="product-name">Address<span>*</span></label>
+        <input type="text" id="product-name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="product-price">Land Mark<span>*</span></label>
+        <input type="text" id="product-price" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="product-quantity">City<span>*</span></label>
+        <input type="text" id="product-quantity" class="form-control"  required>
+      </div>
+      <div class="form-group">
+        <label for="product-quantity">Phone Number<span>*</span></label>
+        <input type="number" id="product-quantity" class="form-control"  required>
+      </div>
+      <div class="form-group">
+        <label for="product-quantity">Pincode<span>*</span></label>
+        <input type="number" id="product-quantity" class="form-control"  required>
+      </div>
+      <button class="next-button" (click)="nextStep(1)">Next</button>
+    </form>
+  </div>
+
+  <div class="step" *ngIf="currentStep === 2">
+    <h2>Step 2:- Select Payment Method</h2>
+    <form id="step-2">
+      <label style="margin-bottom: 20px;" for="payment">Payment Type:-</label>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" style="border: 1px solid black;">
+        <label class="form-check-label" for="exampleCheck1">Card</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck2" style="border: 1px solid black;">
+        <label class="form-check-label" for="exampleCheck2">Paytm</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" style="border: 1px solid black;">
+        <label class="form-check-label" for="exampleCheck3">Phone pay</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" style="border: 1px solid black;">
+        <label class="form-check-label" for="exampleCheck4">Google pay</label>
+      </div>
+      <button class="prev-button" (click)="prevStep(2)">Previous</button>
+      <button class="next-button" (click)="nextStep(2)">Next</button>
+    </form>
+  </div>
+
+  <div class="step" *ngIf="currentStep === 3">
+    <h2>Step 3:- Card Details</h2>
+    <form id="step-3" >
+      <div class="form-group">
+        <label for="product-description">Name on card<span>*</span></label>
+        <input id="product-description" class="form-control"  required>
+      </div>
+      <div class="form-group">
+        <label for="product-size">Card Number<span>*</span></label>
+        <input type="text" id="product-size" class="form-control"  required>
+      </div>
+      <div class="form-group">
+        <label for="product-company">CVV<span>*</span></label>
+        <input type="text" id="product-company" class="form-control"  required>
+      </div>
+      <div class="form-group">
+        <label for="product-description">Expiry Date<span>*</span></label>
+        <input type="date" id="product-description" class="form-control"  required>
+      </div>
+      <button class="prev-button" (click)="prevStep(3)">Previous</button>
+      <button type="submit" class="submit-button">Proceed To Payment</button>
+    </form>
+  </div>
 </div>

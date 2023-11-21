@@ -51,7 +51,7 @@ const routes: Routes = [
     component:MensfootwearComponent
   },
   {
-    path: 'groceries',
+    path: 'Checkout',
     component:KidsclothesComponent
   },
   {

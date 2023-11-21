@@ -13,6 +13,7 @@ export class AdminloginComponent {
 
 
   adminLoginForm:any=FormGroup;
+  formSubmitted = false;
 
   constructor(private fb:FormBuilder,private userservice:UserService,private toastr:ToastrService,private router:Router){
     this.adminLoginForm = this.fb.group({
@@ -23,6 +24,7 @@ export class AdminloginComponent {
 
 
   loginAdmin(){
+    this.formSubmitted = true;
     let value=this.adminLoginForm.value
     console.log("first",value)
     this.userservice.adminLogin(value).subscribe((res)=>{

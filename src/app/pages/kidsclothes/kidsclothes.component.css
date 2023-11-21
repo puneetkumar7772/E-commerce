@@ -1,0 +1,61 @@
+
+.stepper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+span{
+  color: red;
+  font-size: 20px;
+}
+.home{
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 20px;
+  text-decoration: none;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.next-button,
+.prev-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.submit-button {
+  background-color: #28A745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  .form-control {
+    width: 100%;
+  }
+  .submit-button{
+    margin-top: 10px;
+  }
+}

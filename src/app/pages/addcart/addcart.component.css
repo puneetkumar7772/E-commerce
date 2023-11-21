@@ -30,9 +30,10 @@ a {
 p {
   color: #555;
 }
-
-
-
+.scroll{
+  overflow: scroll;
+  height: 400px;
+}
 .small-container {
   margin: auto;
   display: grid;
@@ -119,6 +120,92 @@ h4{
   grid-template-rows: 5;
 }
 
+.Order{
+  display: grid;
+  grid-template-rows: 3;
+  gap: 10px;
+  height: 50px;
+}
+.card{
+  border-radius: 15px;
+box-shadow:  10px 10px 10px #bebebe,
+             -10px -10px 60px #ffffff;
+}
+.card-text{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+.card-title{
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+
+.button {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0px 15px;
+  background-color: rgb(66, 66, 66);
+  border-radius: 10px;
+  color: white;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  margin-left: 40px;
+  margin-bottom: 15px;
+}
+
+.bell {
+  width: 13px;
+}
+
+.bell path {
+  fill: rgb(0, 206, 62);
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: rgb(101, 18, 196);
+  transition-duration: .2s;
+}
+
+.button:hover .arrow {
+  animation: slide-right .6s ease-out both;
+}
+/* arrow animation */
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.button:active {
+  transform: translate(1px , 1px);
+  transition-duration: .2s;
+}
+
 @media only screen and (max-width: 600px) {
   .row {
     text-align: center;
@@ -127,6 +214,12 @@ h4{
   .col-3,
   .col-4 {
     flex-basis: 100%;
+  }
+  .small-container {
+    display: grid;
+    grid-template-columns:100%;
+    gap: 20px;
+
   }
 
   .single-product .row {
@@ -144,7 +237,10 @@ h4{
     display: none;
   }
   .cart-page {
-    margin: 90px auto;
+    margin: 30px auto;
     margin-left: 20px;
+  }
+  h2{
+    margin-left: 17px;
   }
 }
