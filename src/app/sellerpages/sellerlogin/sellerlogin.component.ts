@@ -11,6 +11,7 @@ import { UserService } from 'src/app/auth/user.service';
 })
 export class SellerloginComponent {
   sellerloginForm:any=FormGroup;
+  formSubmitted = false;
 
 constructor(private fb:FormBuilder,private userservice:UserService,private router:Router,private toastr:ToastrService){
   this.sellerloginForm=this.fb.group({
@@ -20,6 +21,7 @@ constructor(private fb:FormBuilder,private userservice:UserService,private route
 }
 
 sellerLogin(){
+  this.formSubmitted = true;
   let body=this.sellerloginForm.value
   console.log("second",body);
   this.userservice.sellerLogin(body).subscribe((res)=>{
@@ -27,7 +29,7 @@ sellerLogin(){
     if(res){
       console.log("Seller login")
       this.toastr.success("Seller Login successfully")
-      this.router.navigate(['/sellerhome'])
+      this.router.navigate(['/seller/sellerhome/sellerproduct'])
     }else{
       this.toastr.warning("Seller not found")
       console.log("Seller not found")

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthserviceService } from 'src/app/auth/authservice.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { AuthserviceService } from 'src/app/auth/authservice.service';
   styleUrls: ['./mensclothes.component.css']
 })
 export class MensclothesComponent {
-constructor(private authservice:AuthserviceService){}
+constructor(private authservice:AuthserviceService,private router:Router){}
 Data: any[] = [];
 isLoading: boolean = true;
 ngOnInit(){
@@ -30,6 +31,10 @@ menClothes() {
       this.isLoading = false;
     }
   );
+}
+
+details(id:number){
+  this.router.navigate(['/sellerhome/singleproduct', id]);
 }
 
 }

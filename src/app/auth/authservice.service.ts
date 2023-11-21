@@ -63,5 +63,4 @@ getSingleProduct(id:any):Observable<any>{
   return this.http.get(`${this.baseUrl}/products/${id}`)
 }
 
-
 }

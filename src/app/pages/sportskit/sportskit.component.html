@@ -22,7 +22,9 @@
 </div>
 <div class="loader" *ngIf="isLoading"></div>
 <div class="row">
-  <div class="card2" style="width: 18rem;" *ngFor="let value of allData">
+  <div class="card2" style="width: 18rem;cursor: pointer;" *ngFor="let value of allData"
+  routerLink="/sellerhome/singleproduct"(click)="details(value.id)"
+  data-toggle="tooltip" data-placement="top" title="Click for Product Detail">
     <img [src]="value.thumbnail" class="card-img-top" alt="..." class="all_image"><br>
     <div class="card-body">
       <h5 class="card-title">{{value.category}}</h5>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthserviceService } from 'src/app/auth/authservice.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { AuthserviceService } from 'src/app/auth/authservice.service';
   styleUrls: ['./mensfootwear.component.css']
 })
 export class MensfootwearComponent {
-constructor(private authservice:AuthserviceService){}
+constructor(private authservice:AuthserviceService,private router:Router){}
 
 allData: any[] = [];
 isLoading: boolean = true;
@@ -32,5 +33,9 @@ getMenShoes() {
       this.isLoading = false;
     }
   );
+}
+
+details(id:number){
+  this.router.navigate(['/sellerhome/singleproduct', id]);
 }
 }
