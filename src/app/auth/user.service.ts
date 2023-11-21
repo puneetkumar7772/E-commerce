@@ -7,9 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
   constructor(private http: HttpClient) {}
-  baseUrl = 'http://localhost:3000/ecommerce/';
+  baseUrl = 'https://e-commerce-backend-hblz.onrender.com/ecommerce/'
+  baseurl2='http://localhost:3000/ecommerce'
 
-  userRegister(body: any): Observable<any> {
+  userRegister(body: any): Observable <any> {
     return this.http.post(`${this.baseUrl}register`, body);
   }
 
@@ -21,6 +22,10 @@ export class UserService {
     return this.http.get(`${this.baseUrl}allUSer`,);
   }
 
+  deleteUSer(id:any): Observable<any> {
+    return this.http.delete(`${this.baseUrl}deleteUSer/${id}`,);
+  }
+
   sellerRegister(body: any): Observable<any> {
     return this.http.post(`${this.baseUrl}sellerRegister`, body);
   }
@@ -28,4 +33,16 @@ export class UserService {
   sellerLogin(body: any): Observable<any> {
     return this.http.post(`${this.baseUrl}sellerlogin`, body);
   }
+
+  adminLogin(body: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/admin/login`, body);
+  }
+  getAllSelers(): Observable<any> {
+    return this.http.get(`${this.baseUrl}allSeller`,);
+  }
+
+  deleteSeller(id:any): Observable<any> {
+    return this.http.delete(`${this.baseUrl}deleteSeller/${id}`,);
+  }
+
 }

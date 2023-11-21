@@ -38,6 +38,9 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { UsernavbarComponent } from './pages/usernavbar/usernavbar.component';
 import { SellernavbarComponent } from './sellerpages/sellernavbar/sellernavbar.component';
 import { AlluserslistComponent } from './admin/alluserslist/alluserslist.component';
+import { AllsellerlistComponent } from './admin/allsellerlist/allsellerlist.component';
+import { SingleproductDetailsComponent } from './pages/singleproduct-details/singleproduct-details.component';
+import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
 
 
 @NgModule({
@@ -71,7 +74,10 @@ import { AlluserslistComponent } from './admin/alluserslist/alluserslist.compone
     FooterComponent,
     UsernavbarComponent,
     SellernavbarComponent,
-    AlluserslistComponent
+    AlluserslistComponent,
+    AllsellerlistComponent,
+    SingleproductDetailsComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,

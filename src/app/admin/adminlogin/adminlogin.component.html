@@ -1,0 +1,35 @@
+<!-- <div class="login login-container"> -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        Admin Login Page
+      </a>
+      <a class="home" routerLink="/">Home</a>
+    </div>
+  </nav>
+<div>
+  <div class="login_section container">
+    <div>
+      <!-- <div class="login-image"> -->
+        <img class="login-image" src="../../../assets/images/admin2.jpg" alt="Side Image">
+      <!-- </div> -->
+    </div>
+    <!-- <div> -->
+      <form class="login-form" [formGroup]="adminLoginForm" (ngSubmit)="loginAdmin()">
+        <h3>Admin Login</h3>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input class="form-control" type="email" id="email" name="email" placeholder="Email" formControlName="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="form-control" type="password" id="password" name="password" placeholder="Password" formControlName="password" required>
+        </div>
+        <button type="submit">Login</button>
+         <!-- <div><a href="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Forgate password</a></div> -->
+      </form>
+
+    <!-- </div> -->
+  </div>
+</div>
+<!-- </div> -->

@@ -3,3 +3,7 @@
   font-weight: 600;
   font-family: sans-serif;
 }
+.navbar{
+  position: fixed;
+  top: 0px;
+}

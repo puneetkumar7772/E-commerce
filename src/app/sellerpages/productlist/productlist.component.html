@@ -1,6 +1,10 @@
 <app-sellerhome></app-sellerhome>
 <div class="container">
+  <h1>
+    All Products list
+  </h1>
   <table class="table align-middle mb-0 bg-white">
+    <div class="loader" *ngIf="isLoading"></div>
     <thead class="bg-light">
       <tr>
         <th>Product Name</th>
@@ -42,7 +46,7 @@
           <button class="btn btn-link btn-sm btn-rounded fw-bold" style="text-decoration: none;">
             Edit
           </button>
-          <button type="button" class="btn  btn-link btn-sm btn-rounded fw-bold" style="color: red;text-decoration: none;">
+          <button type="button" class="btn  btn-link btn-sm btn-rounded fw-bold" style="color: red;text-decoration: none;" (click)="deleteProducts(value.id)">
             Delete
           </button>
         </td>

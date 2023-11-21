@@ -8,6 +8,9 @@ import { ProductlistComponent } from 'src/app/sellerpages/productlist/productlis
 import { SellerloginComponent } from 'src/app/sellerpages/sellerlogin/sellerlogin.component';
 import { AdminhomeComponent } from 'src/app/admin/adminhome/adminhome.component';
 import { AlluserslistComponent } from 'src/app/admin/alluserslist/alluserslist.component';
+import { AllsellerlistComponent } from 'src/app/admin/allsellerlist/allsellerlist.component';
+import { SingleproductDetailsComponent } from 'src/app/pages/singleproduct-details/singleproduct-details.component';
+import { AdminloginComponent } from 'src/app/admin/adminlogin/adminlogin.component';
 
 const routes: Routes = [
   {
@@ -15,11 +18,11 @@ const routes: Routes = [
     component:SellerhomeComponent
   },
   {
-    path: 'seller/register',
+    path: 'register',
     component:SellerregisterComponent
   },
   {
-    path: 'seller/login',
+    path: 'login',
     component:SellerloginComponent
   },
   {
@@ -31,12 +34,24 @@ const routes: Routes = [
     component:ProductlistComponent
   },
   {
-    path: 'sellerhome/adminhome',
+    path: 'sellerhome/singleproduct/:id',
+    component:SingleproductDetailsComponent
+  },
+  {
+    path: 'seller/sellerhome/adminhome',
     component:AdminhomeComponent
   },
   {
     path: 'admin/userlist',
     component:AlluserslistComponent
+  },
+  {
+    path: 'admin/sellerlist',
+    component:AllsellerlistComponent
+  },
+  {
+    path: 'admin/adminlogin',
+    component:AdminloginComponent
   },
 ];
 

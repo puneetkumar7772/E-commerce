@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthserviceService } from 'src/app/auth/authservice.service';
 @Component({
   selector: 'app-home',
@@ -7,9 +8,9 @@ import { AuthserviceService } from 'src/app/auth/authservice.service';
 })
 export class HomeComponent {
 
-  constructor(private authservice:AuthserviceService) { }
+  constructor(private authservice:AuthserviceService,private router:Router) { }
   allData: any[] = [];
-
+  isLoading: boolean = true;
 
 ngOnInit(){
   this.getProducts()
@@ -20,6 +21,7 @@ getProducts() {
       console.log("API response:", res);
       if (Array.isArray(res.products)) {
         this.allData = res.products;
+        this.isLoading = false;
       } else {
         console.error("Invalid API response format. Expected an array of products.");
       }
@@ -27,8 +29,12 @@ getProducts() {
     },
     (error) => {
       console.error("API request error:", error);
+      this.isLoading = false;
     }
   );
+}
+details(id:number){
+  this.router.navigate(['/sellerhome/singleproduct', id]);
 }
 
 }

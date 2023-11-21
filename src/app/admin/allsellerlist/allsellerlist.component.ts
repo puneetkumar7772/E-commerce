@@ -3,22 +3,24 @@ import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/auth/user.service';
 
 @Component({
-  selector: 'app-alluserslist',
-  templateUrl: './alluserslist.component.html',
-  styleUrls: ['./alluserslist.component.css']
+  selector: 'app-allsellerlist',
+  templateUrl: './allsellerlist.component.html',
+  styleUrls: ['./allsellerlist.component.css']
 })
-export class AlluserslistComponent {
+export class AllsellerlistComponent {
+  constructor(private userservice:UserService,private toastr:ToastrService,private cdr: ChangeDetectorRef){}
 
-  constructor(private userservice:UserService,private toastr:ToastrService,private cdr:ChangeDetectorRef){}
-
-data:any[]=[]
-isLoading: boolean = true;
+  data:any[]=[]
+  isLoading: boolean = true;
 ngOnInit(){
-this.listOfAllUser()
+this.listOfAllSeller()
+}
+ngOnChanges(){
+  this.listOfAllSeller()
 }
 
-listOfAllUser(){
-  this.userservice.getAllUSers().subscribe(
+listOfAllSeller(){
+  this.userservice.getAllSelers().subscribe(
     (res) => {
       console.log("Response:", res);
       if (Array.isArray(res)) {
@@ -36,17 +38,17 @@ listOfAllUser(){
   );
 }
 
-deleteUsers(id:any){
-  this.userservice.deleteUSer(id).subscribe((res)=>{
+deleteSeller(id:any){
+  this.userservice.deleteSeller(id).subscribe((res)=>{
     console.log(res)
     if(res){
-      console.log("User deleted successfully")
-      this.toastr.success("User deleted successfully")
+      console.log("seller deleted successfully")
+      this.toastr.success("Seller deleted successfully")
       this.cdr.detectChanges();
-      this.listOfAllUser()
+      this.listOfAllSeller()
 
     }else{
-      console.log("User is not deleted")
+      console.log("seller is not deleted")
     }
   })
 

@@ -10,7 +10,7 @@ export class MensfootwearComponent {
 constructor(private authservice:AuthserviceService){}
 
 allData: any[] = [];
-
+isLoading: boolean = true;
 
 ngOnInit(){
   this.getMenShoes()
@@ -21,6 +21,7 @@ getMenShoes() {
       console.log("API response:", res);
       if (Array.isArray(res.products)) {
         this.allData = res.products;
+        this.isLoading = false;
       } else {
         console.error("Invalid API response format. Expected an array of products.");
       }
@@ -28,6 +29,7 @@ getMenShoes() {
     },
     (error) => {
       console.error("API request error:", error);
+      this.isLoading = false;
     }
   );
 }

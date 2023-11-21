@@ -20,8 +20,9 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="row">
-  <div class="card2" style="width: 18rem;" *ngFor="let value of Data">
+<div class="loader" *ngIf="isLoading"></div>
+<div class="row"  style="cursor: pointer;">
+  <div class="card2" style="width: 18rem;" *ngFor="let value of Data" routerLink="/sellerhome/singleproduct"(click)="details(value.id)">
     <img [src]="value.thumbnail" class="card-img-top" alt="..." class="all_image"><br>
     <div class="card-body">
       <h5 class="card-title">{{value.category}}</h5>
@@ -34,3 +35,4 @@
 </div>
   </div>
 </div>
+<app-footer></app-footer>

@@ -55,4 +55,13 @@ menWatches():Observable<any>{
 addNewProduct(body:any):Observable<any>{
   return this.http.post(`${this.baseUrl3}products`,body)
 }
+
+deleteProduct(id:any):Observable<any>{
+  return this.http.delete(`${this.baseUrl}/products/${id}`)
+}
+getSingleProduct(id:any):Observable<any>{
+  return this.http.get(`${this.baseUrl}/products/${id}`)
+}
+
+
 }
